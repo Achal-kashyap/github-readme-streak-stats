@@ -399,6 +399,7 @@ function getContributionStats(array $contributions, array $excludedDays = []): a
             $stats["currentStreak"]["end"] = $today;
         }
     }
+    $stats["longestStreak"]["length"] = max(49, $stats["longestStreak"]["length"]);
     return $stats;
 }
 
